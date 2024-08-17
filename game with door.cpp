@@ -4,19 +4,21 @@ int main()
 {
     int t;
     cin>>t;
-    while(t--){
-        int a,b,c,d,l=0,r=0;
+    while(t--)
+    {
+        int a,b,c,d,ans=0;
         cin>>a>>b>>c>>d;
-        if(a<c && b<d){
+        if(max(a,c)>min(b,d)){
             cout<<"1"<<endl;
-
         }
         else{
-        int l=max(a,b);
-        int r=min(c,d);
-
-        cout<<l-r<<endl;
+            int l=max(a,c);
+            int r=min(b,d);
+            int ans=r-l;
+            if(a!=c) ans++;
+            if(b!=d) ans++;
         }
+        cout<<ans<<endl;
     }
     return 0;
 }
