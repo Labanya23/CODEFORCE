@@ -13,7 +13,7 @@ int main()
             swap(x1,x2);
             swap(y1,y2);
         }
-        if(y2>=y1){
+        if(y2<=y1){
             cout<<"NO"<<endl;
         }
         else{
